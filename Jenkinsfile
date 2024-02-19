@@ -32,7 +32,7 @@ pipeline {
         }
 	stage('Deployment') {
 	   steps {
-		sh 'sshpass -p ec2-user scp target/gamutkart.war ec2-user@172.31.5.220:/ec2-user/apache-tomcat-9.0.85/webapps/'
+		sh 'sshpass -p ec2-user scp target/gamutkart.war ec2-user@ip-172-31-5-220:/home/ec2-user/apache-tomcat-9.0.85/webapps'
 	}
     }
 }
